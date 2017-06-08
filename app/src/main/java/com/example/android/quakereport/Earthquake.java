@@ -17,6 +17,11 @@ public class Earthquake {
      */
     private double mMagnitude;
 
+    /**
+     *  Url of the earthquake
+     */
+    private String mUrl;
+
 
     /**
      * Creates a new Earthquake object
@@ -25,10 +30,11 @@ public class Earthquake {
      * @param timeInMilliseconds     the date of the earthquake
      * @param EarthquakeMagnitude the Magnitude of the earthquake
      */
-    public Earthquake(String EarthquakeLocation, long timeInMilliseconds, double EarthquakeMagnitude) {
+    public Earthquake(String EarthquakeLocation, long timeInMilliseconds, double EarthquakeMagnitude, String url) {
         mLocation = EarthquakeLocation;
         mTimeInMilliseconds = timeInMilliseconds;
         mMagnitude = EarthquakeMagnitude;
+        mUrl = url;
     }
 
     /**
@@ -55,5 +61,12 @@ public class Earthquake {
      */
     public double getMagnitude() {
         return mMagnitude;
+    }
+
+    /**
+     *  Gets the url of the earthquake
+     */
+    public String getUrl() {
+        return mUrl;
     }
 }
